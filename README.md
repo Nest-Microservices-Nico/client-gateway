@@ -21,3 +21,9 @@ docker run -d --name nats-server -p 4222:4222 -p 8222:8222 nats
 ```
 docker run -d --name nats-server -p 4222:4222 -p 8222:8222 nats
 ```
+
+## Producción
+
+```
+docker build -f Dockerfile.prod -t client-gateway .
+```

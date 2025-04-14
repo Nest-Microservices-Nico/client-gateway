@@ -5,10 +5,8 @@ WORKDIR /usr/src/app
 COPY package.json ./
 COPY package-lock.json ./
 
-RUN npm install --legacy-peer-deps
+RUN npm install
 
-# Instalar grep
-RUN apk --no-cache add grep
 
 COPY . .
 

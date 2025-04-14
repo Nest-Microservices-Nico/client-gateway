@@ -6,11 +6,11 @@ services:
     image: postgres:16.2
     restart: always
     volumes:
-      -./postgres:/var/lib/postgresql/data
+      - ./postgres:/var/lib/postgresql/data
     ports:
-      -5432:5432
+      - "5432:5432"  # Encierra el mapping de puertos en una lista
     environment:
+      - PORT=3000
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=123456
-      - POSTGRES_USER=ordersdb
-
+      - POSTGRES_DB=ordersdb  # Corregí la variable POSTGRES_USER duplicada a POSTGRES_DB
